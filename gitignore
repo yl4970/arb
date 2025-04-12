@@ -1,4 +1,5 @@
 __pycache__/
+stat-arb/
 *.py[cod]
 .DS_Store
 .env
@@ -8,8 +9,6 @@ dist/
 build/
 .idea/
 *.log
-stat-arb/
-.DS_Store
 *.egg
 *.egg-info/
 *.whl
