@@ -16,7 +16,8 @@ pnl_dict = signal(full_strike_data)
 # Transform signals to lists for plotting
 x_axis = [gz[5:8] for gz in pnl_dict.keys()]
 y_axis = [
-    sum(pnl_dict[gz][key][0] ** 2 for key in pnl_dict[gz].keys())
+    sum(pnl_dict[gz][key][0] * pnl_dict[gz][key][1]
+        for key in pnl_dict[gz].keys())
     for gz in pnl_dict.keys()
 ]
 
