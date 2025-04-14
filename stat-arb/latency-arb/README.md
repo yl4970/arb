@@ -10,7 +10,7 @@ This repository contains a data processing pipeline designed to identify latency
 * Realized vs. theoretical PnL comparison
 
 ### File Structure
-'''
+''' bash
 latency_arb/
 │
 ├── code
