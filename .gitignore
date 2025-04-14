@@ -1,0 +1,35 @@
+# macOS system files
+.DS_Store
+
+# Virtual environments
+.venv/
+ven/
+env/
+
+
+# Archive folder
+archive/
+
+# Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Requirements file (if you don't want to track it)
+requirements.txt
+
+# TWS API folder
+twsapi_macunix.1026.03/
+
+# Ignore all parent directories
+../
+
+# Ignore all data files
+*.csv
+stat-arb/latency-arb/data_gz/
+*.gz
+stat-arb/latency-arb/data_tar/
+*.tar
+
+# Ignore all log files
+.vscode/
