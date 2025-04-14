@@ -26,9 +26,9 @@ plot_df = pd.DataFrame({"x": x_axis, "y": y_axis}).sort_values(by="x")
 
 # Plot the data
 plt.figure(figsize=(10, 6))
-plt.plot(plot_df.x, plot_df.y, marker="o", linestyle="-", color="b")
+plt.plot(plot_df.x, plot_df.y, linestyle="-", color="b")
 plt.xlabel("Strike (x-axis)")
-plt.ylabel("Sum of PnL Squared (y-axis)")
+plt.ylabel("Sum of PnL (y-axis)")
 plt.title("PnL Signals Across Strikes")
 plt.grid(True)
 plt.show()
