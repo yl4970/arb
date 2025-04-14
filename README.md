@@ -9,9 +9,16 @@ This repository contains a data processing pipeline designed to identify latency
 * lippage modeling
 * Realized vs. theoretical PnL comparison
 
-### File Structure (Coming Soon)
+### File Structure
+''' bash
 latency_arb/
 │
-├── signal_processing.py      # Core signal detection logic
-├── pnl_simulation.py         # (Planned) PnL backtesting logic
-├── data/                     # Quote data (not included in repo)
+├── code
+     ├─ signal_processing.py     # Core signal detection logic
+     ├─ signal_per_strke.py      # Understanding signal distribution 
+     ├─ strat_execution.py       # Core execution logic
+     ├─ backtesting.py           # Planned
+     ├─ util.py                  # Utility funcs
+     ├─ settings.py              # Settings
+├── data-sample                  # Snapshot of data structure algoseek
+'''
