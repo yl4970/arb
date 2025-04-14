@@ -12,13 +12,13 @@ This repository contains a data processing pipeline designed to identify latency
 ### File Structure
 ```
 latency_arb/
-│
-├── code
-     ├─ signal_processing.py     # Core signal detection logic
-     ├─ signal_per_strke.py      # Understanding signal distribution 
-     ├─ strat_execution.py       # Core execution logic
-     ├─ backtesting.py           # Planned
-     ├─ util.py                  # Utility funcs
-     ├─ settings.py              # Settings
-├── data-sample                  # Snapshot of data structure algoseek
+   │
+   ├── code
+   │    ├─ signal_processing.py     # Core signal detection logic
+   │    ├─ signal_per_strke.py      # Understanding signal distribution 
+   │    ├─ strat_execution.py       # Core execution logic
+   │    ├─ backtesting.py           # Planned
+   │    ├─ util.py                  # Utility funcs
+   │    ├─ settings.py              # Settings
+   ├── data-sample                  # Snapshot of data structure algoseek
 ```
