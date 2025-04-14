@@ -10,7 +10,7 @@ This repository contains a data processing pipeline designed to identify latency
 * Realized vs. theoretical PnL comparison
 
 ### File Structure
-''' bash
+```
 latency_arb/
 │
 ├── code
@@ -21,4 +21,4 @@ latency_arb/
      ├─ util.py                  # Utility funcs
      ├─ settings.py              # Settings
 ├── data-sample                  # Snapshot of data structure algoseek
-'''
+```
