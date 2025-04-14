@@ -2,12 +2,33 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 from signal_processing import load_all as signal
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 
 from util import *
 from settings import *
 
-# extract_all_tar(TAR_FILE_PATH, GZ_DIR)
-full_strke_data = extract_all_gz(GZ_DIR)
+# Extract data from gz files
+full_strike_data = extract_all_gz(GZ_DIR)
 
-pnl_dict = signal(full_strke_data)
+# Save signals across all strikes
+pnl_dict = signal(full_strike_data)
+
+# Transform signals to lists for plotting
+x_axis = [gz[5:8] for gz in pnl_dict.keys()]
+y_axis = [
+    sum(pnl_dict[gz][key][0] * pnl_dict[gz][key][1]
+        for key in pnl_dict[gz].keys())
+    for gz in pnl_dict.keys()
+]
+
+# Create a DataFrame for plotting
+plot_df = pd.DataFrame({"x": x_axis, "y": y_axis}).sort_values(by="x")
+
+# Plot the data
+plt.figure(figsize=(10, 6))
+plt.plot(plot_df.x, plot_df.y, linestyle="-", color="b")
+plt.xlabel("Strike (x-axis)")
+plt.ylabel("Sum of PnL (y-axis)")
+plt.title("PnL Signals Across Strikes")
+plt.grid(True)
+plt.show()
